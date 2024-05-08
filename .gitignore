@@ -19,3 +19,11 @@ bld/
 
 packages/
 obj/
+/.vs/Mark10/v17/.suo
+/.vs/Mark10/v17/DocumentLayout.json
+/src/Feature/Navigation/code/obj/Debug/Mark10.Feature.Navigation.csproj.AssemblyReference.cache
+/.vs
+/.vs/Mark10
+/.vs/Mark10/v17
+.vs/Mark10/v17/.suo
+.vs/Mark10/v17/DocumentLayout.json
