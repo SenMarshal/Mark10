@@ -1,0 +1,224 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sitecore.Screenshots</name>
+    </assembly>
+    <members>
+        <member name="T:Sitecore.Screenshots.Generators.CookieDescriptor">
+            <summary>
+            <c>CookieDescriptor</c> represents a cookie.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Screenshots.Generators.CookieDescriptor.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructs a <see cref="T:Sitecore.Screenshots.Generators.CookieDescriptor"/> instance.
+            </summary>
+            <param name="name">Cookie name.</param>
+            <param name="value">Cookie value.</param>
+            <param name="domain">Cookie domain.</param>
+            <param name="path">Cookie path.</param>
+        </member>
+        <member name="P:Sitecore.Screenshots.Generators.CookieDescriptor.Name">
+            <summary>
+            Cookie name.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Screenshots.Generators.CookieDescriptor.Value">
+            <summary>
+            Cookie value.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Screenshots.Generators.CookieDescriptor.Domain">
+            <summary>
+            Cookie domain.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Screenshots.Generators.CookieDescriptor.Path">
+            <summary>
+            Cookie path.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Screenshots.Generators.PhantomJsHtmlCapture.RunCapturing(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.Nullable{System.TimeSpan},System.String)">
+            <summary>
+            Runs capturing in a separate process.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Screenshots.IScreenshotGenerator">
+            <summary>
+            An interface to take screenshots.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Screenshots.IScreenshotGenerator.CreateScreenshotAsync(System.Uri,System.String,System.Int32,System.Int32,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Collections.Generic.IReadOnlyCollection{Sitecore.Screenshots.Generators.CookieDescriptor})">
+            <summary>
+            Take a screenshots of a page at a give URL.
+            </summary>
+            <param name="url">URL of a page.</param>
+            <param name="filePath">Path where to save a screenshot.</param>
+            <param name="height">Height of a screenshot.</param>
+            <param name="width">Width of a screenshot.</param>
+            <param name="headers">Headers to use when requesting a page.</param>
+            <param name="cookies">Cookies to use when requesting a page.</param>
+            <returns>True if success, otherwise false.</returns>
+        </member>
+        <member name="T:Sitecore.Screenshots.IScreenshotsSettings">
+            <summary>
+            Settings for screenshots.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Screenshots.IScreenshotsSettings.PhantomJsExePath">
+            <summary>
+            Path to PhantomJs executable.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Screenshots.IScreenshotsSettings.PhantomJsRenderScriptPath">
+            <summary>
+            Path to PhantomJs script file.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Screenshots.IScreenshotsSettings.ChromePath">
+            <summary>
+            Path to chrome executable.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Screenshots.IServiceCollectionExtensions">
+            <summary>
+            Extensions for <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Screenshots.IServiceCollectionExtensions.RegisterPlayWrightGenerator``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Registers Playwright based generator.
+            </summary>
+            <typeparam name="T">A type implementing <see cref="T:Sitecore.Screenshots.ScreenshotsSettings"/>.</typeparam>
+            <returns><see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.</returns>
+        </member>
+        <member name="M:Sitecore.Screenshots.IServiceCollectionExtensions.RegisterPhantomJsGenerator``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Registers PhantomJS based generator.
+            </summary>
+            <typeparam name="T">A type implementing <see cref="T:Sitecore.Screenshots.ScreenshotsSettings"/>.</typeparam>
+            <returns><see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.</returns>
+        </member>
+        <member name="T:Sitecore.Screenshots.ScreenshotGenerator">
+            <summary>
+            A base class to take screenshots.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Screenshots.ScreenshotGenerator.CreateScreenshotAsync(System.Uri,System.String,Sitecore.Screenshots.ScreenshotOptions,System.Collections.Generic.IReadOnlyDictionary{System.String,System.String},System.Collections.Generic.IReadOnlyCollection{Sitecore.Screenshots.Generators.CookieDescriptor})">
+            <summary>
+            Take a screenshots of a page at a give URL.
+            </summary>
+            <param name="url">URL of a page.</param>
+            <param name="filePath">Path where to save a screenshot.</param>
+            <param name="options">The options.</param>
+            <param name="headers">Headers to use when requesting a page.</param>
+            <param name="cookies">Cookies to use when requesting a page.</param>
+            <returns>
+            True if success, otherwise false.
+            </returns>
+        </member>
+        <member name="T:Sitecore.Screenshots.ScreenshotOptions">
+            <summary>
+            Options for taking a screenshot.
+            </summary>
+        </member>
+        <member name="M:Sitecore.Screenshots.ScreenshotOptions.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Screenshots.ScreenshotOptions"/> class.
+            </summary>
+            <param name="height">The height.</param>
+            <param name="width">The width.</param>
+        </member>
+        <member name="M:Sitecore.Screenshots.ScreenshotOptions.#ctor(System.Int32,System.Int32,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.TimeSpan})">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Screenshots.ScreenshotOptions"/> class.
+            </summary>
+            <param name="height">The height.</param>
+            <param name="width">The width.</param>
+            <param name="headless">The headless.</param>
+            <param name="allowDownloads">The allow downloads.</param>
+            <param name="timeout">The timeout.</param>
+        </member>
+        <member name="M:Sitecore.Screenshots.ScreenshotOptions.#ctor(System.Int32,System.Int32,System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.TimeSpan},System.Collections.Generic.IReadOnlyCollection{System.String},System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Sitecore.Screenshots.ScreenshotOptions"/> class.
+            </summary>
+            <param name="height">The height.</param>
+            <param name="width">The width.</param>
+            <param name="headless">The headless.</param>
+            <param name="allowDownloads">The allow downloads.</param>
+            <param name="timeout">The timeout.</param>
+            <param name="scriptFilesPath">The script files full path.</param>
+            <param name="scriptToEvaluate">The script to evaluate.</param>
+            <param name="userAgent">The user agent string.</param>
+        </member>
+        <member name="P:Sitecore.Screenshots.ScreenshotOptions.Height">
+            <summary>
+            Gets the height.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Screenshots.ScreenshotOptions.Width">
+            <summary>
+            Gets the width.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Screenshots.ScreenshotOptions.Headless">
+            <summary>
+            Gets the headless.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Screenshots.ScreenshotOptions.AllowDownloads">
+            <summary>
+            Gets the allow downloads.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Screenshots.ScreenshotOptions.Timeout">
+            <summary>
+            Gets the timeout.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Screenshots.ScreenshotOptions.ScriptFilesPath">
+            <summary>
+            Gets the script files.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Screenshots.ScreenshotOptions.ScriptToEvaluate">
+            <summary>
+            Gets the script to evaluate.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Screenshots.ScreenshotOptions.UserAgent">
+            <summary>
+            Gets the user agent.
+            </summary>
+        </member>
+        <member name="T:Sitecore.Screenshots.ScreenshotsSettings">
+            <summary>
+            Settings for screenshots.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Screenshots.ScreenshotsSettings.PhantomJsExePath">
+            <summary>
+            Path to PhantomJs executable.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Screenshots.ScreenshotsSettings.PhantomJsRenderScriptPath">
+            <summary>
+            Path to PhantomJs script file.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Screenshots.ScreenshotsSettings.ChromePath">
+            <summary>
+            Path to chrome executable.
+            </summary>
+        </member>
+        <member name="P:Sitecore.Screenshots.ScreenshotsSettings.Timeout">
+            <summary>
+            Gets the timeout.
+            </summary>
+            <value>
+            The timeout.
+            </value>
+        </member>
+    </members>
+</doc>
