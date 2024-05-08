@@ -17,6 +17,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dictionary", "Dictionary", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mark10.Foundation.Dictionary", "src\Foundation\Dictionary\code\Mark10.Foundation.Dictionary.csproj", "{B53C0475-5E03-43D6-999E-A89B4FB34C10}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Website", "Website", "{310B3831-1EA8-4476-A07C-08E43E5298A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mark10.Project.Website", "src\Project\Website\code\Mark10.Project.Website.csproj", "{CD3B7E31-A3DE-4967-9BE7-958D6DB3A099}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +35,10 @@ Global
 		{B53C0475-5E03-43D6-999E-A89B4FB34C10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B53C0475-5E03-43D6-999E-A89B4FB34C10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B53C0475-5E03-43D6-999E-A89B4FB34C10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD3B7E31-A3DE-4967-9BE7-958D6DB3A099}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD3B7E31-A3DE-4967-9BE7-958D6DB3A099}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD3B7E31-A3DE-4967-9BE7-958D6DB3A099}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD3B7E31-A3DE-4967-9BE7-958D6DB3A099}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -40,6 +48,8 @@ Global
 		{07E2F1B2-7A0F-4DD1-B79E-CC52B982ED4E} = {7EE4E8CD-84B2-4511-A1B3-BF3D5BFA7633}
 		{5839D5E7-64CE-4831-BCA8-00AB880FC4A5} = {685E0157-40A3-4F78-8147-AC7A6A4D7B2D}
 		{B53C0475-5E03-43D6-999E-A89B4FB34C10} = {5839D5E7-64CE-4831-BCA8-00AB880FC4A5}
+		{310B3831-1EA8-4476-A07C-08E43E5298A4} = {AF534488-77C2-43D7-A4E3-F853A100A2A2}
+		{CD3B7E31-A3DE-4967-9BE7-958D6DB3A099} = {310B3831-1EA8-4476-A07C-08E43E5298A4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BE28752D-EDB7-4718-9CFE-FADB6517E84F}
